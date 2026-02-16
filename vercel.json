@@ -1,5 +1,5 @@
 {
-    "name": "erihdev-com",
+    "name": "erihdev",
     "framework": "vite",
     "buildCommand": "npm run build",
     "devCommand": "npm run dev",

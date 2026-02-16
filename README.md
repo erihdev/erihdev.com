@@ -1,16 +1,24 @@
-## Hi there 👋
+# Difmashni Portfolio
 
-<!--
-**erihdev/erihdev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A luxury digital portfolio showcasing high-end engineering and entrepreneurial ventures in the Saudi market.
 
-Here are some ideas to get you started:
+## Core Identity
+**Design Philosophy**: Luxury Glassmorphism, Cinematic Animations, Premium Micro-interactions.
+**Brand**: Coffee & Code - Merging speciality hospitality with full-stack digital architecture.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tech Stack
+- **Framework**: React 19 + TypeScript
+- **Styling**: Tailwind CSS + Custom Silk-Glass Engine
+- **Animations**: Framer Motion
+- **Tooling**: Vite 7
+
+## Development
+```bash
+npm install
+npm run dev
+```
+
+## Production
+```bash
+npm run build
+```
