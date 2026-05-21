@@ -3,14 +3,14 @@ import { Instagram, Linkedin, Mail, ExternalLink } from 'lucide-react';
 
 export const Footer = () => {
     return (
-        <footer id="contact" className="relative pt-48 pb-12 px-6 overflow-hidden">
+        <footer id="contact" className="relative pt-10 sm:pt-14 pb-8 px-4 sm:px-6 overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10 text-center">
                 <motion.div
                     whileInView={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0.9 }}
-                    className="mb-32"
+                    className="mb-8"
                 >
-                    <h2 className="text-4xl md:text-[100px] font-black text-gradient tracking-[-0.05em] leading-[0.8] mb-12">
+                    <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gradient tracking-[-0.05em] leading-[0.85] mb-5 sm:mb-8">
                         لنبدأ معاً <br /> <span className="text-primary shadow-primary/20">مشروعك القادم</span>
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
@@ -19,7 +19,7 @@ export const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
-                            className="h-20 px-12 rounded-[28px] bg-primary text-white font-black text-xl flex items-center gap-4 hover:shadow-[0_20px_60px_-10px_rgba(59,130,246,0.6)] transition-all"
+                            className="h-14 sm:h-16 md:h-20 px-8 sm:px-10 md:px-12 rounded-[22px] sm:rounded-[28px] bg-primary text-white font-black text-base sm:text-lg md:text-xl flex items-center gap-3 sm:gap-4 hover:shadow-[0_20px_60px_-10px_rgba(59,130,246,0.6)] transition-all"
                         >
                             <ExternalLink className="w-6 h-6" />
                             تواصل عبر واتساب
@@ -27,7 +27,7 @@ export const Footer = () => {
                         <motion.a
                             href="mailto:erihdev@gmail.com"
                             whileHover={{ scale: 1.05 }}
-                            className="h-20 px-12 rounded-[28px] glass text-white font-black text-xl flex items-center gap-4 hover:bg-white/5 transition-all border-white/10"
+                            className="h-14 sm:h-16 md:h-20 px-8 sm:px-10 md:px-12 rounded-[22px] sm:rounded-[28px] glass text-white font-black text-base sm:text-lg md:text-xl flex items-center gap-4 hover:bg-white/5 transition-all border-white/10"
                         >
                             راسلنا مباشرة
                         </motion.a>
