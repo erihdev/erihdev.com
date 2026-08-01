@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { GlassCard } from './ui/GlassCard';
+import { PROJECTS } from '../data/projects';
 
 export const Projects = () => {
     return (
@@ -17,59 +19,38 @@ export const Projects = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {[
-                        {
-                            title: "زيارة",
-                            titleEn: "Zyiarah.com",
-                            category: "تطبيق خدمات",
-                            desc: "منصة فخمة لخدمات التنظيف مع نظام حجز متطور وتجربة مستخدم راقية في المملكة.",
-                            image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=2000",
-                            tags: ['React', 'Capacitor', 'Cloud']
-                        },
-                        {
-                            title: "الحي",
-                            titleEn: "Al7ay.com",
-                            category: "منصة اجتماعية",
-                            desc: "منصة تواصل مجتمعي تربط الجيران وتسهل التفاعل المحلي والخدمات الحية.",
-                            image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=2000",
-                            tags: ['Vite', 'Animations', 'UX']
-                        },
-                        {
-                            title: "فايف هب",
-                            titleEn: "FiveHub.com",
-                            category: "منصة القهوة",
-                            desc: "نظام متكامل لسلسلة إمدادات القهوة يربط المزارع والموردين والمحامص والمقاهي.",
-                            image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000",
-                            tags: ['React', 'Supply Chain', 'B2B']
-                        }
-                    ].map((project, i) => (
-                        <GlassCard
-                            key={i}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="group relative h-[240px] sm:h-[260px] md:h-[300px] shadow-xl"
-                        >
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 brightness-75"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#2A2017] via-[#2A2017]/60 to-[#2A2017]/20" />
-                            <div className="absolute inset-0 p-5 sm:p-8 md:p-10 flex flex-col justify-end text-right">
-                                <div className="flex flex-wrap gap-2 mb-3 justify-end">
-                                    {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-full bg-beige/10 text-[10px] uppercase font-black tracking-widest text-beige/70 border border-beige/10">{tag}</span>
-                                    ))}
+                    {PROJECTS.map((project) => (
+                        <Link key={project.slug} to={`/work/${project.slug}`}>
+                            <GlassCard
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="group relative h-[240px] sm:h-[260px] md:h-[300px] shadow-xl"
+                            >
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 brightness-75"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2017] via-[#2A2017]/60 to-[#2A2017]/20" />
+                                <div className="absolute inset-0 p-5 sm:p-8 md:p-10 flex flex-col justify-end text-right">
+                                    <div className="flex flex-wrap gap-2 mb-3 justify-end">
+                                        {project.tags.map(tag => (
+                                            <span key={tag} className="px-3 py-1 rounded-full bg-beige/10 text-[10px] uppercase font-black tracking-widest text-beige/70 border border-beige/10">{tag}</span>
+                                        ))}
+                                    </div>
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-beige mb-1">{project.title}</h3>
+                                    <p className="text-beige/60 text-xs sm:text-sm mb-2 font-medium">{project.titleEn}</p>
+                                    <p className="text-beige/70 text-sm sm:text-base md:text-lg max-w-sm mb-2 font-medium line-clamp-2 sm:line-clamp-none">{project.desc}</p>
+                                    <div className="flex items-center justify-between mt-1">
+                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-bronze">{project.category}</span>
+                                        <span className="text-beige/80 text-xs font-black opacity-0 group-hover:opacity-100 transition-opacity">
+                                            عرض التفاصيل ←
+                                        </span>
+                                    </div>
                                 </div>
-                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-beige mb-1">{project.title}</h3>
-                                <p className="text-beige/60 text-xs sm:text-sm mb-2 font-medium">{project.titleEn}</p>
-                                <p className="text-beige/70 text-sm sm:text-base md:text-lg max-w-sm mb-2 font-medium line-clamp-2 sm:line-clamp-none">{project.desc}</p>
-                                <div className="flex items-center gap-2 mt-1">
-                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-bronze">{project.category}</span>
-                                </div>
-                            </div>
-                        </GlassCard>
+                            </GlassCard>
+                        </Link>
                     ))}
                 </div>
             </div>

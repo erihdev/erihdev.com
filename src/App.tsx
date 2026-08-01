@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Experience } from './components/Experience';
@@ -7,6 +8,17 @@ import { Projects } from './components/Projects';
 import { Services } from './components/Services';
 import { ContactWizard } from './components/ContactWizard';
 import { Footer } from './components/Footer';
+import { ProjectPage } from './pages/ProjectPage';
+
+const Home = () => (
+  <>
+    <Hero />
+    <Experience />
+    <Projects />
+    <Services />
+    <ContactWizard />
+  </>
+);
 
 function App() {
   const containerRef = useRef(null);
@@ -32,11 +44,11 @@ function App() {
       <Navbar />
 
       <main>
-        <Hero />
-        <Experience />
-        <Projects />
-        <Services />
-        <ContactWizard />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
       </main>
 
       <Footer />

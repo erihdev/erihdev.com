@@ -6,10 +6,10 @@ export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { label: 'الرئيسية', href: '#' },
-        { label: 'الخدمات', href: '#services' },
-        { label: 'مشاريعنا', href: '#projects' },
-        { label: 'تواصل معنا', href: '#contact' }
+        { label: 'الرئيسية', href: '/' },
+        { label: 'الخدمات', href: '/#services' },
+        { label: 'مشاريعنا', href: '/#projects' },
+        { label: 'تواصل معنا', href: '/#contact' }
     ];
 
     return (
