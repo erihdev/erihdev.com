@@ -66,9 +66,6 @@ export const Footer = () => {
                         <p className="text-brown/40 text-[10px] uppercase font-black tracking-[0.5em]">
                             © {new Date().getFullYear()} جميع الحقوق محفوظة
                         </p>
-                        <p className="text-brown/50 text-[10px] font-black tracking-wider">
-                            Made with <span className="text-primary">❤️</span> by Erih Dev
-                        </p>
                     </div>
                 </div>
             </div>
