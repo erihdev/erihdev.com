@@ -16,9 +16,9 @@ export const GlassCard = ({
     ...props
 }: GlassCardProps) => {
     const variants = {
-        subtle: 'bg-white/[0.01] border-white/[0.03]',
-        normal: 'glass border-white/5',
-        strong: 'glass-card border-white/10'
+        subtle: 'bg-white/30 border-walnut/[0.06]',
+        normal: 'glass border-walnut/10',
+        strong: 'glass-card border-walnut/15'
     };
 
     return (

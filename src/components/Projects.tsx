@@ -2,16 +2,16 @@ import { GlassCard } from './ui/GlassCard';
 
 export const Projects = () => {
     return (
-        <section id="projects" className="py-8 sm:py-12 px-4 sm:px-6 bg-white/[0.01]">
+        <section id="projects" className="py-8 sm:py-12 px-4 sm:px-6 bg-walnut/[0.03]">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-6">
                     <div className="text-right">
-                        <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-4 block">أعمالنا</span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gradient leading-[0.9] tracking-tighter text-white">
+                        <span className="text-bronze font-black uppercase tracking-[0.4em] text-xs mb-4 block">أعمالنا</span>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gradient leading-[0.9] tracking-tighter">
                             مشاريع<br />نفخر بها
                         </h2>
                     </div>
-                    <p className="max-w-md text-white/30 text-sm sm:text-base leading-relaxed text-right font-medium">
+                    <p className="max-w-md text-brown/70 text-sm sm:text-base leading-relaxed text-right font-medium">
                         مجموعة مختارة من المشاريع التقنية التي صممناها وطورناها للسوق السعودي بأعلى معايير الجودة والاحترافية.
                     </p>
                 </div>
@@ -53,20 +53,20 @@ export const Projects = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 brightness-50"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 brightness-75"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/40 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#2A2017] via-[#2A2017]/60 to-[#2A2017]/20" />
                             <div className="absolute inset-0 p-12 flex flex-col justify-end text-right">
                                 <div className="flex gap-2 mb-4 justify-end">
                                     {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-black tracking-widest text-white/40 border border-white/5">{tag}</span>
+                                        <span key={tag} className="px-3 py-1 rounded-full bg-beige/10 text-[10px] uppercase font-black tracking-widest text-beige/70 border border-beige/10">{tag}</span>
                                     ))}
                                 </div>
-                                <h3 className="text-4xl font-black text-white mb-2">{project.title}</h3>
-                                <p className="text-white/40 text-sm mb-4 font-medium">{project.titleEn}</p>
-                                <p className="text-white/50 text-lg max-w-sm mb-8 font-medium">{project.desc}</p>
+                                <h3 className="text-4xl font-black text-beige mb-2">{project.title}</h3>
+                                <p className="text-beige/60 text-sm mb-4 font-medium">{project.titleEn}</p>
+                                <p className="text-beige/70 text-lg max-w-sm mb-8 font-medium">{project.desc}</p>
                                 <div className="flex items-center gap-2 mt-2">
-                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/60">{project.category}</span>
+                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-bronze">{project.category}</span>
                                 </div>
                             </div>
                         </GlassCard>

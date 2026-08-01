@@ -14,18 +14,18 @@ function App() {
   const smoothYProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   return (
-    <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-[#020617]">
+    <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-[#EFE5D2]">
       <div className="bg-noise" />
 
       {/* Dynamic Background */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <motion.div
           style={{ opacity: useTransform(smoothYProgress, [0, 0.5], [0.3, 0.1]) }}
-          className="absolute top-[-10%] left-[-10%] w-[80%] h-[80%] bg-primary/20 rounded-full blur-[160px] animate-pulse"
+          className="absolute top-[-10%] left-[-10%] w-[80%] h-[80%] bg-primary/15 rounded-full blur-[160px] animate-pulse"
         />
         <motion.div
           style={{ opacity: useTransform(smoothYProgress, [0, 0.8], [0.2, 0.4]) }}
-          className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-600/10 rounded-full blur-[140px]"
+          className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-bronze/15 rounded-full blur-[140px]"
         />
       </div>
 

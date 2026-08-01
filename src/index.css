@@ -5,18 +5,20 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --primary: #3b82f6;
-  --primary-glow: rgba(59, 130, 246, 0.5);
-  --accent-gold: #fbbf24;
-  --bg-obsidian: #020617;
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(255, 255, 255, 0.03);
+  --primary: #173E2F;
+  --primary-glow: rgba(23, 62, 47, 0.45);
+  --accent-bronze: #B68A4E;
+  --bg-beige: #EFE5D2;
+  --ink-brown: #4A3325;
+  --ink-walnut: #2A2017;
+  --glass-border: rgba(74, 51, 37, 0.12);
+  --glass-bg: rgba(255, 255, 255, 0.5);
 }
 
 @layer base {
   body {
-    background-color: #020617;
-    color: #ffffff;
+    background-color: #EFE5D2;
+    color: #2A2017;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Outfit', sans-serif;
@@ -24,7 +26,7 @@
   }
 
   ::selection {
-    background-color: rgba(59, 130, 246, 0.3);
+    background-color: rgba(23, 62, 47, 0.25);
   }
 }
 
@@ -32,33 +34,33 @@
   .glass {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.35));
+    border: 1px solid rgba(74, 51, 37, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(42, 32, 23, 0.08);
   }
 
   .glass-card {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.01));
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(74, 51, 37, 0.14);
     box-shadow:
-      inset 0 1px 1px 0 rgba(255, 255, 255, 0.05),
-      0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.6),
+      0 25px 50px -12px rgba(42, 32, 23, 0.15);
   }
 
   .text-gradient {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(135deg, #ffffff, #ffffff, rgba(255, 255, 255, 0.4));
+    background-image: linear-gradient(135deg, #2A2017, #4A3325, rgba(42, 32, 23, 0.6));
   }
 
   .text-primary-gradient {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(135deg, #3b82f6, #60a5fa, #2563eb);
+    background-image: linear-gradient(135deg, #173E2F, #2E5C46, #173E2F);
   }
 
   .premium-card {
@@ -66,10 +68,10 @@
   }
 
   .premium-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(23, 62, 47, 0.35);
+    background-color: rgba(255, 255, 255, 0.7);
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 20px 40px -20px rgba(23, 62, 47, 0.3);
   }
 
   .perspective-1000 {
@@ -91,13 +93,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(74, 51, 37, 0.25);
   border-radius: 9999px;
   transition: background-color 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(74, 51, 37, 0.45);
 }
 
 /* Cinematic Background Noise */

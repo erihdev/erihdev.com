@@ -49,8 +49,8 @@ export class ErrorBoundary extends Component<Props, State> {
     public render() {
         if (this.state.hasError) {
             return (
-                <div className="min-h-screen flex items-center justify-center p-4 bg-gray-950 text-white">
-                    <div className="max-w-2xl w-full p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl">
+                <div className="min-h-screen flex items-center justify-center p-4 bg-beige text-walnut">
+                    <div className="max-w-2xl w-full p-8 rounded-2xl border border-walnut/10 bg-white/60 backdrop-blur-md shadow-2xl shadow-walnut/10">
                         <div className="text-center space-y-6">
                             <div className="flex justify-center">
                                 <div className="p-4 rounded-full bg-red-500/10">
@@ -59,22 +59,22 @@ export class ErrorBoundary extends Component<Props, State> {
                             </div>
 
                             <div className="space-y-2">
-                                <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                                <h1 className="text-3xl font-bold bg-gradient-to-r from-walnut to-brown bg-clip-text text-transparent">
                                     عذراً، حدث خطأ ما!
                                 </h1>
-                                <p className="text-gray-400">
+                                <p className="text-brown/80">
                                     نعتذر عن الإزعاج. حدث خطأ غير متوقع في التطبيق.
                                 </p>
                             </div>
 
                             {import.meta.env.DEV && this.state.error && (
-                                <div className="p-4 rounded-xl border border-white/10 bg-black/20 text-right mt-4">
-                                    <p className="text-sm font-mono text-red-400 mb-2">
+                                <div className="p-4 rounded-xl border border-walnut/10 bg-walnut/5 text-right mt-4">
+                                    <p className="text-sm font-mono text-red-700 mb-2">
                                         {this.state.error.toString()}
                                     </p>
                                     {this.state.errorInfo && (
-                                        <details className="text-xs text-gray-500">
-                                            <summary className="cursor-pointer hover:text-gray-300">
+                                        <details className="text-xs text-brown/60">
+                                            <summary className="cursor-pointer hover:text-brown">
                                                 عرض التفاصيل التقنية
                                             </summary>
                                             <pre className="mt-2 text-right overflow-auto max-h-40 font-mono text-left" dir="ltr">
@@ -88,21 +88,21 @@ export class ErrorBoundary extends Component<Props, State> {
                             <div className="flex gap-3 justify-center pt-4">
                                 <button
                                     onClick={this.handleReset}
-                                    className="flex items-center gap-2 px-6 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors font-medium"
+                                    className="flex items-center gap-2 px-6 py-2 rounded-lg bg-primary text-beige hover:bg-[#1d4a39] transition-colors font-medium"
                                 >
                                     <RefreshCw className="h-4 w-4" />
                                     إعادة المحاولة
                                 </button>
                                 <button
                                     onClick={this.handleGoHome}
-                                    className="flex items-center gap-2 px-6 py-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors font-medium"
+                                    className="flex items-center gap-2 px-6 py-2 rounded-lg border border-walnut/15 hover:bg-walnut/5 transition-colors font-medium"
                                 >
                                     <Home className="h-4 w-4" />
                                     العودة للرئيسية
                                 </button>
                             </div>
 
-                            <p className="text-sm text-gray-400 pt-4">
+                            <p className="text-sm text-brown/70 pt-4">
                                 إذا استمرت المشكلة، يرجى التواصل مع الدعم الفني
                             </p>
                         </div>

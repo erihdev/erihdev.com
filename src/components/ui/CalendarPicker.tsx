@@ -94,15 +94,15 @@ export const CalendarPicker: React.FC<Props> = ({ value, onChange, maxDaysAhead 
   const rows = Math.ceil(totalCells / 7);
 
   return (
-    <div className="w-full bg-white/[0.02] border border-white/[0.07] rounded-2xl overflow-hidden">
+    <div className="w-full bg-white/50 border border-walnut/15 rounded-2xl overflow-hidden">
 
       {/* ── Header ── */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] bg-white/[0.02]">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-walnut/10 bg-white/40">
         <button
           type="button"
           onClick={nextMonth}
           disabled={!canGoNext()}
-          className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all disabled:opacity-20 disabled:cursor-not-allowed"
+          className="w-8 h-8 rounded-lg flex items-center justify-center text-brown/60 hover:text-walnut hover:bg-walnut/10 transition-all disabled:opacity-20 disabled:cursor-not-allowed"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -114,7 +114,7 @@ export const CalendarPicker: React.FC<Props> = ({ value, onChange, maxDaysAhead 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: direction > 0 ? -8 : 8 }}
             transition={{ duration: 0.18 }}
-            className="font-bold text-sm text-white tracking-wide"
+            className="font-bold text-sm text-walnut tracking-wide"
           >
             {MONTHS_AR[viewMonth]} {viewYear}
           </motion.span>
@@ -124,16 +124,16 @@ export const CalendarPicker: React.FC<Props> = ({ value, onChange, maxDaysAhead 
           type="button"
           onClick={prevMonth}
           disabled={!canGoPrev()}
-          className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all disabled:opacity-20 disabled:cursor-not-allowed"
+          className="w-8 h-8 rounded-lg flex items-center justify-center text-brown/60 hover:text-walnut hover:bg-walnut/10 transition-all disabled:opacity-20 disabled:cursor-not-allowed"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
 
       {/* ── Day names ── */}
-      <div className="grid grid-cols-7 border-b border-white/[0.04] px-2 pt-3 pb-1">
+      <div className="grid grid-cols-7 border-b border-walnut/[0.08] px-2 pt-3 pb-1">
         {DAYS_AR.map(d => (
-          <div key={d} className="text-center text-[10px] font-bold text-slate-500 uppercase tracking-widest pb-1">
+          <div key={d} className="text-center text-[10px] font-bold text-brown/50 uppercase tracking-widest pb-1">
             {d}
           </div>
         ))}
@@ -171,18 +171,18 @@ export const CalendarPicker: React.FC<Props> = ({ value, onChange, maxDaysAhead 
                   relative mx-auto w-8 h-8 rounded-xl text-xs font-bold transition-all duration-150
                   flex items-center justify-center
                   ${selected
-                    ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/30 scale-110'
+                    ? 'bg-primary text-beige shadow-lg shadow-primary/30 scale-110'
                     : todayFlag && !disabled
-                      ? 'bg-white/[0.08] text-[#deff9a] ring-1 ring-[#deff9a]/40'
+                      ? 'bg-primary/10 text-primary ring-1 ring-primary/40'
                       : disabled
-                        ? 'text-slate-700 cursor-not-allowed'
-                        : 'text-slate-300 hover:bg-white/[0.08] hover:text-white cursor-pointer'
+                        ? 'text-brown/25 cursor-not-allowed'
+                        : 'text-walnut/80 hover:bg-primary/10 hover:text-walnut cursor-pointer'
                   }
                 `}
               >
                 {day}
                 {todayFlag && !selected && (
-                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#deff9a]" />
+                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-bronze" />
                 )}
               </button>
             );
@@ -195,10 +195,10 @@ export const CalendarPicker: React.FC<Props> = ({ value, onChange, maxDaysAhead 
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
-          className="border-t border-white/[0.05] px-4 py-2.5 flex items-center gap-2"
+          className="border-t border-walnut/10 px-4 py-2.5 flex items-center gap-2"
         >
-          <span className="text-xs text-slate-500 font-mono">📅</span>
-          <span className="text-xs text-[#deff9a]/80 font-mono">
+          <span className="text-xs text-brown/50 font-mono">📅</span>
+          <span className="text-xs text-primary font-mono">
             {new Date(value + 'T00:00:00').toLocaleDateString('ar-SA', {
               weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
             })}

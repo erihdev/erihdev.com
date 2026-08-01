@@ -12,11 +12,11 @@ export const Hero = () => {
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
                         <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-primary text-[10px] font-black uppercase tracking-[0.3em]">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-walnut/10 text-primary text-[10px] font-black uppercase tracking-[0.3em]">
                                 <div className="w-2 h-2 rounded-full bg-primary animate-ping" />
                                 مؤسسة تقنية سعودية
                             </div>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-green-500/20 text-green-500 text-[10px] font-black uppercase tracking-[0.3em]">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-bronze/30 text-bronze text-[10px] font-black uppercase tracking-[0.3em]">
                                 <Award className="w-3.5 h-3.5" /> خدمات احترافية
                             </div>
                         </div>
@@ -25,7 +25,7 @@ export const Hero = () => {
                             نصنع التطبيقات والمواقع
                         </h1>
 
-                        <p className="text-white/40 text-sm sm:text-base leading-relaxed mb-6 font-medium max-w-2xl mx-auto">
+                        <p className="text-brown/80 text-sm sm:text-base leading-relaxed mb-6 font-medium max-w-2xl mx-auto">
                             مؤسسة تقنية متخصصة في تطوير التطبيقات والمواقع الإلكترونية للشركات والأفراد بأعلى معايير الجودة والاحترافية.
                         </p>
 
@@ -33,7 +33,7 @@ export const Hero = () => {
                             <motion.a
                                 whileHover={{ y: -4, scale: 1.02 }}
                                 href="#contact"
-                                className="h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 rounded-[20px] sm:rounded-[24px] bg-primary text-white font-black text-base sm:text-lg shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all flex items-center gap-3 group"
+                                className="h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 rounded-[20px] sm:rounded-[24px] bg-primary text-beige font-black text-base sm:text-lg shadow-2xl shadow-primary/40 hover:shadow-primary/60 transition-all flex items-center gap-3 group"
                             >
                                 ابدأ مشروعك
                                 <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-x-1 transition-transform" />
@@ -50,7 +50,7 @@ export const Hero = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.1, rotate: -5 }}
-                                        className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl glass flex items-center justify-center hover:bg-white/5 transition-all text-white/30 hover:text-white border-white/10"
+                                        className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl glass flex items-center justify-center hover:bg-primary/5 transition-all text-brown/60 hover:text-primary border-walnut/10"
                                         aria-label={social.label}
                                     >
                                         <social.Icon className="w-6 h-6" />

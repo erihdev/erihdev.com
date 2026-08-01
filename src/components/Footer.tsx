@@ -11,7 +11,7 @@ export const Footer = () => {
                     className="mb-8"
                 >
                     <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gradient tracking-[-0.05em] leading-[0.85] mb-5 sm:mb-8">
-                        لنبدأ معاً <br /> <span className="text-primary shadow-primary/20">مشروعك القادم</span>
+                        لنبدأ معاً <br /> <span className="text-primary">مشروعك القادم</span>
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         <motion.a
@@ -19,7 +19,7 @@ export const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
-                            className="h-14 sm:h-16 md:h-20 px-8 sm:px-10 md:px-12 rounded-[22px] sm:rounded-[28px] bg-primary text-white font-black text-base sm:text-lg md:text-xl flex items-center gap-3 sm:gap-4 hover:shadow-[0_20px_60px_-10px_rgba(59,130,246,0.6)] transition-all"
+                            className="h-14 sm:h-16 md:h-20 px-8 sm:px-10 md:px-12 rounded-[22px] sm:rounded-[28px] bg-primary text-beige font-black text-base sm:text-lg md:text-xl flex items-center gap-3 sm:gap-4 hover:shadow-[0_20px_60px_-10px_rgba(23,62,47,0.5)] transition-all"
                         >
                             <ExternalLink className="w-6 h-6" />
                             تواصل عبر واتساب
@@ -27,19 +27,19 @@ export const Footer = () => {
                         <motion.a
                             href="mailto:erihdev@gmail.com"
                             whileHover={{ scale: 1.05 }}
-                            className="h-14 sm:h-16 md:h-20 px-8 sm:px-10 md:px-12 rounded-[22px] sm:rounded-[28px] glass text-white font-black text-base sm:text-lg md:text-xl flex items-center gap-4 hover:bg-white/5 transition-all border-white/10"
+                            className="h-14 sm:h-16 md:h-20 px-8 sm:px-10 md:px-12 rounded-[22px] sm:rounded-[28px] glass text-walnut font-black text-base sm:text-lg md:text-xl flex items-center gap-4 hover:bg-primary/5 transition-all border-walnut/10"
                         >
                             راسلنا مباشرة
                         </motion.a>
                     </div>
                 </motion.div>
 
-                <div className="pt-24 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-12 text-white">
+                <div className="pt-24 border-t border-walnut/10 flex flex-col md:flex-row items-center justify-between gap-12 text-walnut">
                     <div className="flex items-center gap-4">
                         <img src="/logo.png" alt="Erih Dev Logo" className="w-12 h-12 rounded-2xl object-cover" />
                         <div className="text-right">
                             <span className="font-black uppercase tracking-tighter text-lg leading-none block">إرث لتقنية المعلومات</span>
-                            <span className="text-[10px] font-bold text-white/20 uppercase tracking-[0.4em]">ERIH DEV</span>
+                            <span className="text-[10px] font-bold text-bronze uppercase tracking-[0.4em]">ERIH DEV</span>
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@ export const Footer = () => {
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-2.5 rounded-2xl glass text-[10px] font-black uppercase tracking-widest text-white/30 hover:text-white hover:border-primary/50 transition-all border-white/10 flex items-center gap-2"
+                                className="px-6 py-2.5 rounded-2xl glass text-[10px] font-black uppercase tracking-widest text-brown/60 hover:text-primary hover:border-primary/50 transition-all border-walnut/10 flex items-center gap-2"
                             >
                                 <link.Icon className="w-4 h-4" />
                                 {link.label}
@@ -63,10 +63,10 @@ export const Footer = () => {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <p className="text-white/10 text-[10px] uppercase font-black tracking-[0.5em]">
+                        <p className="text-brown/40 text-[10px] uppercase font-black tracking-[0.5em]">
                             © {new Date().getFullYear()} جميع الحقوق محفوظة
                         </p>
-                        <p className="text-white/20 text-[10px] font-black tracking-wider">
+                        <p className="text-brown/50 text-[10px] font-black tracking-wider">
                             Made with <span className="text-primary">❤️</span> by Erih Dev
                         </p>
                     </div>
