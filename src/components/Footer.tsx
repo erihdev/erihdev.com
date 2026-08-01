@@ -10,10 +10,10 @@ export const Footer = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     className="mb-8"
                 >
-                    <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gradient tracking-[-0.05em] leading-[0.85] mb-5 sm:mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gradient tracking-[-0.02em] leading-[1.05] mb-5 sm:mb-8">
                         لنبدأ معاً <br /> <span className="text-primary">مشروعك القادم</span>
                     </h2>
-                    <div className="flex flex-wrap justify-center gap-8">
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
                         <motion.a
                             href="https://wa.me/966599363888"
                             target="_blank"
@@ -34,7 +34,7 @@ export const Footer = () => {
                     </div>
                 </motion.div>
 
-                <div className="pt-24 border-t border-walnut/10 flex flex-col md:flex-row items-center justify-between gap-12 text-walnut">
+                <div className="pt-10 sm:pt-16 border-t border-walnut/10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 text-walnut">
                     <div className="flex items-center gap-4">
                         <img src="/logo.png" alt="Erih Dev Logo" className="w-12 h-12 rounded-2xl object-cover" />
                         <div className="text-right">

@@ -21,7 +21,7 @@ export const Hero = () => {
                             </div>
                         </div>
 
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-[1.1] text-gradient mb-3 tracking-tighter">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] text-gradient mb-4 tracking-tight">
                             نصنع التطبيقات والمواقع
                         </h1>
 

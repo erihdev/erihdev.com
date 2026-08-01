@@ -27,7 +27,7 @@ export const GlassCard = ({
                 whileHover: { y: -8, scale: 1.02 },
                 transition: { type: "spring", stiffness: 400, damping: 17 }
             } : {})}
-            className={`rounded-[48px] overflow-hidden transition-all duration-500 ${variants[variant]} ${className}`}
+            className={`rounded-3xl sm:rounded-[40px] overflow-hidden transition-all duration-500 ${variants[variant]} ${className}`}
             {...props}
         >
             {children}

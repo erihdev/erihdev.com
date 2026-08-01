@@ -13,7 +13,7 @@ export const Experience = () => {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gradient tracking-tighter">خبرة تقنية موثوقة</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-12">
                     {[
                         { icon: Code2,      value: '3+',   label: 'سنوات خبرة',   desc: 'في تطوير البرمجيات' },
                         { icon: Award,      value: '10+',  label: 'مشروع ناجح',  desc: 'تم تسليمه بنجاح' },
@@ -26,16 +26,16 @@ export const Experience = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="p-4 sm:p-6 text-center group hover:bg-primary/5 transition-all duration-500"
+                            className="p-3 sm:p-6 text-center group hover:bg-primary/5 transition-all duration-500"
                         >
                             <motion.div
                                 whileHover={{ rotate: 360, scale: 1.1 }}
                                 transition={{ duration: 0.6 }}
-                                className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3 mx-auto group-hover:bg-primary group-hover:text-beige transition-all"
+                                className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3 mx-auto group-hover:bg-primary group-hover:text-beige transition-all"
                             >
-                                <stat.icon className="w-8 h-8" />
+                                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8" />
                             </motion.div>
-                            <h3 className="text-2xl sm:text-3xl font-black text-walnut mb-1">{stat.value}</h3>
+                            <h3 className="text-xl sm:text-3xl font-black text-walnut mb-1">{stat.value}</h3>
                             <p className="text-primary font-black text-sm mb-1">{stat.label}</p>
                             <p className="text-brown/70 text-xs font-medium">{stat.desc}</p>
                         </GlassCard>
