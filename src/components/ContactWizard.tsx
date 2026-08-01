@@ -191,9 +191,21 @@ export const ContactWizard: React.FC = () => {
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[
-                      { title: 'نطاق نمو سريع',          desc: 'Startup / MVP' },
-                      { title: 'نطاق أعمال متقدم',        desc: 'Business Expansion' },
-                      { title: 'نطاق مخصص للمؤسسات',     desc: 'Enterprise Solutions' },
+                      {
+                        title: 'نطاق نمو سريع',
+                        desc: 'Startup / MVP',
+                        features: ['نسخة أولى جاهزة للإطلاق', 'المزايا الأساسية لفكرتك', 'أسرع تنفيذ وأقل تكلفة'],
+                      },
+                      {
+                        title: 'نطاق أعمال متقدم',
+                        desc: 'Business Expansion',
+                        features: ['تطبيق أو موقع متكامل', 'دفع إلكتروني وإشعارات ولوحة تحكم', 'تصميم احترافي بهوية منشأتك'],
+                      },
+                      {
+                        title: 'نطاق مخصص للمؤسسات',
+                        desc: 'Enterprise Solutions',
+                        features: ['حلول مصممة بالكامل حسب الطلب', 'تكاملات مع أنظمتك الداخلية', 'دعم وصيانة مستمرة بأولوية'],
+                      },
                     ].map(b => (
                       <div
                         key={b.title}
@@ -206,6 +218,14 @@ export const ContactWizard: React.FC = () => {
                       >
                         <span className="block font-bold text-sm text-walnut">{b.title}</span>
                         <span className="block font-mono text-xs text-brown/60 mt-1">{b.desc}</span>
+                        <ul className="mt-3 pt-3 border-t border-walnut/10 space-y-1.5 text-right">
+                          {b.features.map(f => (
+                            <li key={f} className="flex items-start gap-2 text-xs text-brown/80 leading-relaxed">
+                              <span className="text-primary font-black mt-0.5">✓</span>
+                              {f}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     ))}
                   </div>
