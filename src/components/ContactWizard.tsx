@@ -194,23 +194,29 @@ export const ContactWizard: React.FC = () => {
                       {
                         title: 'نطاق نمو سريع',
                         desc: 'Startup / MVP',
+                        quote: '«عندي فكرة وأبغى أجرّبها»',
                         features: ['نسخة أولى جاهزة للإطلاق', 'المزايا الأساسية لفكرتك', 'أسرع تنفيذ وأقل تكلفة'],
+                        example: 'مثال: متجر بسيط يعرض منتجاتك ويستقبل الطلبات عبر واتساب',
                       },
                       {
                         title: 'نطاق أعمال متقدم',
                         desc: 'Business Expansion',
+                        quote: '«عندي نشاط قائم وأبغى أتوسع رقمياً»',
                         features: ['تطبيق أو موقع متكامل', 'دفع إلكتروني وإشعارات ولوحة تحكم', 'تصميم احترافي بهوية منشأتك'],
+                        example: 'مثال: تطبيق لمحلّك بدفع إلكتروني وحسابات عملاء وتتبع طلبات',
                       },
                       {
                         title: 'نطاق مخصص للمؤسسات',
                         desc: 'Enterprise Solutions',
+                        quote: '«شركة تحتاج نظاماً يتكامل مع أنظمتها»',
                         features: ['حلول مصممة بالكامل حسب الطلب', 'تكاملات مع أنظمتك الداخلية', 'دعم وصيانة مستمرة بأولوية'],
+                        example: 'مثال: نظام لفروعك يرتبط بالمحاسبة والمخزون بصلاحيات وتقارير',
                       },
                     ].map(b => (
                       <div
                         key={b.title}
                         onClick={() => handleSelect('budget', b.title)}
-                        className={`p-4 rounded-xl border cursor-pointer transition-all text-center ${
+                        className={`p-4 rounded-xl border cursor-pointer transition-all text-center flex flex-col ${
                           formData.budget === b.title
                             ? 'border-primary bg-primary/[0.06]'
                             : 'bg-white/40 border-walnut/10 hover:border-primary/40'
@@ -218,7 +224,8 @@ export const ContactWizard: React.FC = () => {
                       >
                         <span className="block font-bold text-sm text-walnut">{b.title}</span>
                         <span className="block font-mono text-xs text-brown/60 mt-1">{b.desc}</span>
-                        <ul className="mt-3 pt-3 border-t border-walnut/10 space-y-1.5 text-right">
+                        <span className="block text-xs text-primary font-bold mt-2">{b.quote}</span>
+                        <ul className="mt-3 pt-3 border-t border-walnut/10 space-y-1.5 text-right flex-1">
                           {b.features.map(f => (
                             <li key={f} className="flex items-start gap-2 text-xs text-brown/80 leading-relaxed">
                               <span className="text-primary font-black mt-0.5">✓</span>
@@ -226,6 +233,9 @@ export const ContactWizard: React.FC = () => {
                             </li>
                           ))}
                         </ul>
+                        <p className="mt-3 pt-3 border-t border-walnut/10 text-[11px] text-bronze leading-relaxed text-right">
+                          {b.example}
+                        </p>
                       </div>
                     ))}
                   </div>
